@@ -18,7 +18,7 @@ class ListsController < ApplicationController
   end
 
   def update
-    if List.update(list_params)
+    if @list.update(list_params)
       redirect_to :root
     else
       render action: :edit
