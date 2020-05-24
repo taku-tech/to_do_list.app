@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   devise_for :users
   root 'homes#top'
 
-  resources :lists, only: [:new, :create, :edit, :update]
+  resources :lists, only: [:new, :create, :edit, :update, :destroy]
 end
