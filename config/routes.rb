@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   root 'homes#top'
 
   resources :users, only: [:edit, :update]
-  
+
   resources :lists, only: [:new, :create, :edit, :update, :destroy] do
-  	resources :cards, only: [:new, :create]
+  	resources :cards, only: [:index, :new, :create, :show]
   end
   
 end
